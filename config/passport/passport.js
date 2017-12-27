@@ -55,12 +55,14 @@ module.exports = function(passport,user,player){
 					firstname:req.body.firstname,
 					lastname:req.body.lastname,
 					accessKey:bcryptAccessKey,
+					highScore: req.body.highscore
 				};
 
 				var dataforAccountTable = userType=="Player"? {//set data for student account
 					firstname:req.body.firstname,
 					lastname:req.body.lastname,
 					email:req.body.email,
+					highScore: req.body.highscore,
 					accessKey:bcryptAccessKey
 				}:{//set data for admin account
 					firstname:req.body.firstname,
