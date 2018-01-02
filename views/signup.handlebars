@@ -1,0 +1,32 @@
+{{> title}}
+
+<form action="/signup" method="post">
+	<div id="authNav">
+		<a href="/login">Log In</a>
+		<a id="active" href="/">Sign Up</a>
+	</div>
+	<h1>Sign up</h1>
+	{{#if hasErrors}}
+		<div id="errors" class="alert alert-danger">
+			<strong>Authentication Error: </strong>{{message}}
+		</div>
+	{{/if}}
+	<strong>Type of User</strong>
+	<select id="userType" class="custom-select" name="userType" placeholder="UserType">
+	  	<option value="Student">Player</option>
+	</select>
+	<div class="form-group">
+	    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email here">
+	</div>
+	<div class="form-group">
+	    <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password here">
+	</div>
+	<div class="form-group">
+	    <input type="text" class="form-control" name="firstname" id="firstName" placeholder="Enter First Name here">
+	    <input type="text" class="form-control" name="lastname" id="LastName" placeholder="Enter Last Name here">
+	</div>
+	<div class="form-group">
+	    <input type="username" class="form-control" name="username" id="username" placeholder="What's your username?">
+	</div>
+	<button id="sendCreds">Sign Up</button>
+</form>

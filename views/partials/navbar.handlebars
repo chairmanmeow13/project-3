@@ -1,0 +1,31 @@
+<nav id="homenav">
+	{{#if homePage}}
+		<div id="greeting">
+			Welcome, {{username}}		
+		</div>
+	{{else if showInfo}}
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Player Information<span class="caret"></span></button>
+			<ul id="playerStats" class="dropdown-menu">
+				<li></li>
+				<li>Name: {{firstname}} {{lastname}}</li>
+				<li>Highest Score: {{highestScore}}</li>
+				<li>Last Activity: {{recentActivity}}</li>
+				<li>Last Activity Time: {{recentActivityTime}}</li>
+			</ul>	
+		</div>
+	{{else if gamePage}}
+	<div id="game">{{username}} - {{gamePage}}</div>
+	{{/if}}
+	<div id="menuNav">
+		{{#unless homePage}}
+			<a href="/home">Home</a>
+		{{/unless}}
+
+		{{#if player}}
+			<a href="/Profile">Player Profile</a>
+		{{/if}}
+		
+		<a href="/logout">Log Out</a>
+	</div>
+</nav>
