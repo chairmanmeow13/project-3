@@ -13,20 +13,24 @@
 	{{/if}}
 	<strong>Type of User</strong>
 	<select id="userType" class="custom-select" name="userType" placeholder="UserType">
-	  	<option value="Student">Player</option>
+	  	<option value="Player">Player</option>
 	</select>
 	<div class="form-group">
-	    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email here">
+	    <input type="text" class="form-control" name="email" id="email" placeholder="Enter email here">
 	</div>
 	<div class="form-group">
-	    <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password here">
+	    <input type="text" class="form-control" name="firstname" id="firstName" placeholder="Enter first name here">
+	    <input type="text" class="form-control" name="lastname" id="LastName" placeholder="Enter last name here">
 	</div>
 	<div class="form-group">
-	    <input type="text" class="form-control" name="firstname" id="firstName" placeholder="Enter First Name here">
-	    <input type="text" class="form-control" name="lastname" id="LastName" placeholder="Enter Last Name here">
+	    <input type="username" class="form-control" name="username" id="username" placeholder="Create your unique username">
 	</div>
 	<div class="form-group">
-	    <input type="username" class="form-control" name="username" id="username" placeholder="What's your username?">
+	    <input type="hidden" class="form-control" name="playerID" id="playerID" placeholder="Create your unique player ID">
 	</div>
+	<div class="form-group">
+	    <input type="password" class="form-control" name="password" id="password" placeholder="Enter password here">
+	</div>
+
 	<button id="sendCreds">Sign Up</button>
 </form>
