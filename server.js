@@ -47,19 +47,3 @@ app.set("view engine","handlebars");//set the express view engine as handlebars
 //authentication, credentials and session instantiation
 require("./config/passport/passport.js")(passport,models.user,models.player,models.admin);
 
-//routes
-require("./routes/auth.js")(app,
-							passport,
-							models.user,
-							models.player,
-							models.admin);
-require("./routes/admin.js")(app,
-							models.player,
-							models.admin,
-							models.sequelize,
-							models.highscores);
-// require("./routes/game.js")(app,
-// 										);
-require("./routes/player.js")(app,
-								models.player,
-								models.game);
